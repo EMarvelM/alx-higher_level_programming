@@ -1,5 +1,7 @@
 # ALX Higher Level Programming - JavaScript Warm-up
+
 [![js-semistandard-style](https://raw.githubusercontent.com/standard/semistandard/master/badge.svg)](https://github.com/standard/semistandard)
+
 This repository contains solutions to the tasks in the "JavaScript Warm-up" project of the ALX Higher Level Programming curriculum.
 
 ## Curriculum
