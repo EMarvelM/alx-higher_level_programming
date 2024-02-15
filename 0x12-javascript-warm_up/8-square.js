@@ -9,7 +9,7 @@ if (isNaN(num)) {
   for (let i = 0; i < num; i++) {
     let block = '';
     for (let j = 0; j < num; j++) {
-      block += 'x';
+      block += 'X';
     }
     console.log(block);
   }
