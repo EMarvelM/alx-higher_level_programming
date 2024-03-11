@@ -2,9 +2,8 @@
 const { argv } = require('node:process');
 if (argv[2]) {
   if (!isNaN(Number(argv[2])) && Number(argv[2]) > 0) {
-    for (let i = 0; i < Number(argv[2]); i++)
-    {
-        console.log('C is fun');
+    for (let i = 0; i < Number(argv[2]); i++) {
+      console.log('C is fun');
     }
   }
 } else {
