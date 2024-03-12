@@ -6,11 +6,13 @@ module.exports = class Square extends Squared {
     super(size);
   }
 
-  charPrint(c) {
+  charPrint (c) {
     if (c && typeof c === 'string') {
-      for (let i = 0; i < this.height; i++){
+      for (let i = 0; i < this.height; i++) {
         console.log(c.repeat(this.width));
       }
+    } else {
+        this.print();
     }
   }
 };
