@@ -5,7 +5,8 @@ module.exports = class Square extends Rectangle {
   constructor (size) {
     super(constructor);
     if (size > 0) {
-      this.width = this.height = size;
+      this.height = size;
+      this.width = size;
     }
   }
 };
