@@ -10,16 +10,9 @@ import MySQLdb
 from sys import argv
 
 if __name__ == "__main__":
-    db = MySQLdb.connect(
-        user=argv[1],
-        passwd=argv[2],
-        db=argv[3]
-    )
+    db = MySQLdb.connect(user=argv[1], passwd=argv[2], db=argv[3])
     c = db.cursor()
-
-    c.execute("SELECT * FROM states ORDER BY(id) ASC")
-    result = c.fetchall()
-    [print(x) for x in result if x[1] == argv[4].strip()]
-
-    c.close()
-    db.close()
+    c.execute("""SELECT * FROM states
+                WHERE name LIKE BINARY '{}'
+                ORDER BY states.id ASC""".format(argv[4]).strip("'"))
+    [print(state) for state in c.fetchall()]
