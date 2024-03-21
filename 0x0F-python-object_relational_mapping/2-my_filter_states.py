@@ -17,10 +17,9 @@ if __name__ == "__main__":
     )
     c = db.cursor()
 
-    c.execute("SELECT * FROM states WHERE name = %s \
-              ORDER BY(id) ASC", (argv[4],))
+    c.execute("SELECT * FROM states ORDER BY(id) ASC")
     result = c.fetchall()
-    [print(x) for x in result]
+    [print(x) for x in result if x[1] == argv[4]]
 
     c.close()
     db.close()
