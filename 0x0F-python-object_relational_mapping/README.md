@@ -54,7 +54,6 @@ _For detailed requirements on each task, refer to the specific task files._
 ## Installation and Setup
 - **Install venv:**
 ```bash
-
 $ sudo apt-get install python3.8-venv
 $ python3 -m venv venv
 $ source venv/bin/activate
@@ -62,4 +61,29 @@ $ source venv/bin/activate
 ```
 - **Install MySQLdb version 2.0.x:**
 
+```bash
+$ sudo apt-get install python3-dev
+$ sudo apt-get install libmysqlclient-dev
+$ sudo apt-get install zlib1g-dev
+$ sudo pip3 install mysqlclient
+
+```
+
+- **Install SQLAlchemy version 1.4.x:**
+
+```bash
+$ sudo pip3 install SQLAlchemy
+
+```
+
+
+## Project Structure
+- **Directory:** 0x0F-python-object_relational_mapping
+
+## Usage
+_For each task, follow the specific instructions provided in the task files._
+
+## Credits
+- This project is part of the ALX Higher Level Programming curriculum.
+- Written by Guillaume, ALX Staff
 
