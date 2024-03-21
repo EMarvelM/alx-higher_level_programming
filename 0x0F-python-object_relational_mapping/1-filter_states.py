@@ -23,9 +23,8 @@ if __name__ == "__main__":
 
     c = db.cursor()
 
-    c.execute("SELECT * FROM states WHERE LEFT(name, 1) \
-              = 'N' ORDER BY(id) ASC")
-    [print(x) for x in c.fetchall()]
+    c.execute("SELECT * FROM `states` ORDER BY `id`")
+    [print(state) for state in c.fetchall() if state[1][0] == "N"]
 
     c.close()
     db.close()
