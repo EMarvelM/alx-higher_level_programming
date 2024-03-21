@@ -9,3 +9,5 @@ c = db.cursor()
 c.execute("SELECT * FROM states")
 result = c.fetchall()
 
+for i in result:
+    print(i)
