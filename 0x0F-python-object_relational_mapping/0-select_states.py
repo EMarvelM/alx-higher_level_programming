@@ -5,7 +5,7 @@ from sys import argv
 # .0-select_states.py root '' hbtn_0e_0_usa
 def connect_db():
     db = MySQLdb.Connect(
-        host="3306",
+        host="localhost",
         user=argv[1],
         password=argv[2],
         database=argv[3]
@@ -16,7 +16,8 @@ def connect_db():
     result = c.fetchall()
 
     for i in result:
-        print(i)
+        if i:
+            print(i)
 
 
 if __name__ == "__main__":
