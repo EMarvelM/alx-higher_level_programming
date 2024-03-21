@@ -14,3 +14,10 @@ if __name__ == "__main__":
         db=database
     )
 
+    c = db.cursor()
+
+    c.execute("SELECT * FROM states WHERE LEFT(name, 1) = 'N' ORDER BY(id) ASC")
+    [print(x) for x in c.fetchall()]
+
+    c.close()
+    db.close()
