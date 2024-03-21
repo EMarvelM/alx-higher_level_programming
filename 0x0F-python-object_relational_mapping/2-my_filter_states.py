@@ -19,7 +19,7 @@ if __name__ == "__main__":
 
     c.execute("SELECT * FROM states ORDER BY(id) ASC")
     result = c.fetchall()
-    [print(x) for x in result if x[1] == argv[4]]
+    [print(x) for x in result if x[1] == argv[4].strip()]
 
     c.close()
     db.close()
