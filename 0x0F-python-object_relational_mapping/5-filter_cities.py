@@ -14,10 +14,12 @@ if __name__ == "__main__":
         db=argv[3]
     )
     c = db.cursor()
-    query = "SELECT cities.name FROM cities JOIN states ON cities.state_id = states.id WHERE states.name = %s"
+    query = "SELECT cities.name FROM cities\
+        JOIN states ON cities.state_id = states.id\
+        WHERE states.name = %s"
     c.execute(query, (argv[4],))
     j = []
-    [ j.append(*x) for x in c.fetchall()]
+    [j.append(*x) for x in c.fetchall()]
     print(*j, sep=', ')
 
     c.close()
