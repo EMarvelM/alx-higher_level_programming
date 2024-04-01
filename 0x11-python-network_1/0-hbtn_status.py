@@ -10,6 +10,6 @@ with urllib.request.urlopen("https://alx-intranet.hbtn.io/status") as new_data:
     - content: {}\n".format(type(data), data)
 
     data_str = data.decode()
-    _str += "    - utf8 content: " + data_str 
+    _str += "    - utf8 content: " + data_str
 
     print(_str)
