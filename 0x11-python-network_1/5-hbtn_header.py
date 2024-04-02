@@ -9,8 +9,5 @@ if __name__ == "__main__":
 
     url = sys.argv[1]
     
-    try:
-        dat = requests.get(url)
-        print(dat.headers["X-Request-Id"])
-    except Requests.exceptions.RequestException as e:
-        sys.exit()
+    dat = requests.get(url)
+    print(dat.headers.get("X-Request-Id"))
