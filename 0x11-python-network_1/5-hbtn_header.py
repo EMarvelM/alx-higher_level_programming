@@ -12,5 +12,5 @@ if __name__ == "__main__":
     try:
         dat = requests.get(url)
         print(dat.headers["X-Request-Id"])
-    except requests.HTTPError as e:
+    except Requests.exceptions.RequestException as e:
         sys.exit()
