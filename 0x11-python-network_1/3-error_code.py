@@ -2,10 +2,10 @@
 """URL, sends a request to the URL and displays the body
 """
 
-if __name__ == "__main__":
-    from urllib import request, error
-    import sys
+from urllib import request, error
+import sys
 
+if __name__ == "__main__":
     try:
         with request.urlopen(sys.argv[1]) as data:
             _str = data.read().decode("utf-8")
