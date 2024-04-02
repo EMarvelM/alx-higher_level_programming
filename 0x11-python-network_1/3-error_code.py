@@ -9,7 +9,7 @@ if __name__ == "__main__":
     try:
         url = request.Request(sys.argv[1])
         with request.urlopen(url) as data:
-            _str = data.read().decode("utf-8")
+            _str = data.read().decode("ascii")
             print(_str)
 
     except error.HTTPError as e:
