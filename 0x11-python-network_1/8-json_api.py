@@ -7,9 +7,9 @@ import requests
 import sys
 
 if __name__ == "__main__":
-    if sys.argv[1]:
+    try:
         data = {"q": sys.argv[1]}
-    else:
+    except IndexError:
         data = {"q": ""}
     re = requests.post("http://0.0.0.0:5000/search_user", data=data)
     _data = re.json()
