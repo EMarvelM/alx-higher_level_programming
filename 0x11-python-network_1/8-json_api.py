@@ -17,7 +17,7 @@ if __name__ == "__main__":
     if _data and (isinstance(_data, dict)):
         print("[{}] {}".format(_data.get('id'), _data.get('name')))
 
-    elif _date and not isinstance(_data, dict):
+    elif _data and not isinstance(_data, dict):
         print("Not a valid JSON")
 
     else:
