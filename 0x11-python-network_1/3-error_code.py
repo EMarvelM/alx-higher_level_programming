@@ -13,5 +13,4 @@ if __name__ == "__main__":
             print(_str)
 
     except urllib.error.HTTPError as e:
-        print("Error code: " + str(e.status))
-        sys.exit()
+        print("Error code: {}".format(e.code))
