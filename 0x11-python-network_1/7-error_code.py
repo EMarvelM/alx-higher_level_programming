@@ -13,5 +13,3 @@ if __name__ == "__main__":
         print("Error code: {}".format(req.status_code))
     else:
         print("Index")
-
-
