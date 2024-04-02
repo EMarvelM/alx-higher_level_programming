@@ -6,8 +6,8 @@ from urllib import request, error
 import sys
 
 if __name__ == "__main__":
+    url = request.Request(sys.argv[1])
     try:
-        url = request.Request(sys.argv[1])
         with request.urlopen(url) as data:
             _str = data.read().decode("ascii")
             print(_str)
