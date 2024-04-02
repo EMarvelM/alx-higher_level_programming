@@ -8,6 +8,9 @@ if __name__ == "__main__":
     import sys
 
     url = sys.argv[1]
-
-    dat = requests.get(url)
-    print(dat.headers["X-Request-Id"])
+    
+    try:
+        dat = requests.get(url)
+        print(dat.headers["X-Request-Id"])
+    except requests.HTTPError as e:
+        sys.exit()
