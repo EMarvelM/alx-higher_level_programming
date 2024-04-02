@@ -3,14 +3,13 @@
 """
 
 if __name__ == "__main__":
-    import urllib.request
-    import urllib.error
+    from urllib import request, error
     import sys
 
     try:
-        with urllib.request.urlopen(sys.argv[1]) as data:
+        with request.urlopen(sys.argv[1]) as data:
             _str = data.read().decode("utf-8")
             print(_str)
 
-    except urllib.error.HTTPError as e:
+    except error.HTTPError as e:
         print("Error code: {}".format(e.code))
