@@ -8,5 +8,4 @@ const content = argv[3];
 
 writeFile(file, content, (err) => {
   if (err) throw err;
-})
-
+});
