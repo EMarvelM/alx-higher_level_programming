@@ -11,5 +11,5 @@ request(url, (err, response, body) => {
     console.log(err);
     return;
   }
-  console.log('code: ', response.statusCode);
+  console.log('code:', response.statusCode);
 });
